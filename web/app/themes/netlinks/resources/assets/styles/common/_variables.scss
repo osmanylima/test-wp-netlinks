@@ -1,0 +1,17 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$f-font: "Poppins", sans-serif;
+$f-reenie: "Reenie Beanie", cursive;
+
+$c-primary: #33c;
+$c-secondary: #50d9d4;
+$c-gray-dark: #212121;
+
+.transition {
+  transition: 0.3s ease all;
+}
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;

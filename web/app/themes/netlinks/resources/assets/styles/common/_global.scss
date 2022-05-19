@@ -1,0 +1,144 @@
+html,
+body {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  min-height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: $f-font;
+  min-width: 320px;
+  background-color: $white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+ul {
+  padding-left: 0;
+  margin-bottom: 0;
+
+  li {
+    list-style: none;
+    font-size: 14px;
+    line-height: 21px;
+    color: $c-gray-dark;
+
+    &:last-child {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $f-font;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.25px;
+}
+
+h1 {
+  font-family: $f-reenie;
+  font-size: 36px;
+  line-height: 36px;
+  color: $c-primary;
+  margin-bottom: 15px;
+  font-weight: 500;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+h2 {
+  font-size: 37px;
+  font-weight: 600;
+  line-height: 1.2em;
+  color: $c-gray-dark;
+  margin-bottom: 15px;
+
+  strong {
+    font-weight: 900;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+  line-height: 20px;
+  color: $c-primary;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+h5 {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 50px;
+
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+h6 {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 600;
+  color: $c-primary;
+  margin-bottom: 0;
+}
+
+p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  color: $c-gray-dark;
+
+  strong {
+    font-weight: 700;
+  }
+
+  span {
+    color: $c-primary;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+
+    strong {
+      font-weight: 700;
+    }
+  }
+
+  small {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  &:last-child {
+    margin-bottom: 0 !important;
+  }
+}

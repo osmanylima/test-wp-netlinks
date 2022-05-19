@@ -1,0 +1,24 @@
+.btn-cta {
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 600;
+  color: $white;
+  outline: none;
+  background-color: $c-primary;
+  border: 2px solid $c-primary;
+  border-radius: 5px;
+  box-shadow: 3px 3px 10px 0 rgba(0, 0, 0, 0.22);
+  padding: 15px 40px;
+
+  @extend .transition;
+
+  &:hover {
+    color: $c-primary;
+    background-color: $white;
+  }
+
+  @include media-breakpoint-down(sm) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}

@@ -1,0 +1,165 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+.banner {
+  min-height: 145px;
+
+  @include media-breakpoint-down(md) {
+    min-height: 115px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    min-height: 90px;
+  }
+
+  .brand img {
+    width: 180px;
+
+    @include media-breakpoint-down(md) {
+      width: 150px;
+    }
+  }
+
+  @include media-breakpoint-only(sm) {
+    .container {
+      max-width: calc(100% - 50px);
+    }
+  }
+}
+
+.elements-itens {
+  svg {
+    width: 16px;
+    height: 16px;
+    margin: 2px 10px 0 0;
+  }
+}
+
+.box-elements-md {
+  padding: 50px 0;
+  background-color: #f0f0f0;
+  min-height: 300px;
+
+  .elements-itens {
+    padding: 0 95px;
+  }
+}
+
+.menu-mobile-button {
+  z-index: 10000;
+  border: none;
+  background: none;
+  outline: none !important;
+  padding: 0;
+  position: relative;
+  margin-left: 30px;
+}
+
+.toggle-menu-button {
+  .toggle-menu-button-icon {
+    position: relative;
+    top: 0;
+    display: inline-block;
+    width: 24px;
+    height: 16px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    transform: rotate(0deg);
+    outline: none;
+
+    span {
+      position: absolute;
+      display: block;
+      width: 50%;
+      height: 3px;
+      opacity: 1;
+      transition: 0.25s ease-in-out;
+      transform: rotate(0deg);
+      background-color: $c-primary;
+
+      &:nth-child(odd) {
+        left: 0;
+        border-radius: 5px 0 0 5px;
+      }
+
+      &:nth-child(even) {
+        left: 50%;
+        border-radius: 0 5px 5px 0;
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        top: 0;
+      }
+
+      &:nth-child(3),
+      &:nth-child(4) {
+        top: 6px;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        top: 12px;
+      }
+    }
+  }
+
+  &.is-open {
+    span:nth-child(1) {
+      top: 2px;
+      left: 2px;
+    }
+
+    span:nth-child(2) {
+      top: 2px;
+      left: calc(50% - 2px);
+    }
+
+    span:nth-child(3) {
+      left: -50%;
+      opacity: 0;
+    }
+
+    span:nth-child(4) {
+      left: 100%;
+      opacity: 0;
+    }
+
+    span:nth-child(5) {
+      top: 10px;
+      left: 2px;
+    }
+
+    span:nth-child(6) {
+      top: 10px;
+      left: calc(50% - 2px);
+    }
+
+    span:nth-child(1),
+    span:nth-child(6) {
+      transform: rotate(45deg);
+    }
+
+    span:nth-child(3),
+    span:nth-child(4) {
+      top: 6px;
+    }
+
+    span:nth-child(2),
+    span:nth-child(5) {
+      transform: rotate(-45deg);
+    }
+
+    .menu-mobile-button {
+      position: fixed;
+      top: 40px;
+      left: 15px;
+    }
+  }
+}
